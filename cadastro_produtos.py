@@ -1,3 +1,5 @@
+#TRABALHO FEITO POR JOAO PAULO SANTOS MARTINS E PAULO CEZAR HENRIQUES REIS
+
 import sqlite3
 import tkinter as tk
 import pandas as pd
@@ -10,26 +12,26 @@ janela.configure(bg='gray')
 
 #Criando o Banco de Dados:
 
-# conexao = sqlite3.connect ('cadastro.db')
+ conexao = sqlite3.connect ('cadastro.db')
 #
 # # Criando o cursor:
-# c = conexao.cursor ()
+c = conexao.cursor ()
 #
 # # Criando a tabela:
 #
-# c.execute ("""CREATE TABLE  Produtos (
-#        codigo integer,
-#        produto text,
-#        valor integer,
-#        quantidade integer,
-#        fornecedor text
-#    )""")
+ c.execute ("""CREATE TABLE  Produtos (
+        codigo integer,
+       produto text,
+        valor integer,
+        quantidade integer,
+        fornecedor text
+    )""")
 #
 # # Commit as mudanças:
-# conexao.commit ()
+ conexao.commit ()
 #
 # # Fechar o banco de dados:
-# conexao.close ()
+ conexao.close ()
 
 def cadastrar_produtos():
      conexao = sqlite3.connect('cadastro.db')
